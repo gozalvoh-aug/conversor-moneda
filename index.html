@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de monedas Nacional</title>
+  <!-- Chart.js desde CDN para el gráfico de historial -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Conversor de monedas Nacional</h1>
+
+      <!-- Input: cantidad en pesos chilenos -->
+      <label for="monto">Pesos CLP</label>
+      <input type="number" id="monto" placeholder="Ingrese el monto en CLP" min="0" step="any">
+
+      <!-- Select: moneda destino (dólar y euro) -->
+      <label for="moneda">Moneda a convertir:</label>
+      <select id="moneda">
+        <option value="">Seleccione moneda</option>
+        <option value="dolar">Dólar</option>
+        <option value="euro">Euro</option>
+      </select>
+
+      <!-- Botón que inicia la consulta a la API y el cálculo --g
+      <button id="btnBuscar">Buscar</button>
+
+      <!-- Contenedor donde se muestra el resultado o los errores -->
+      <p id="resultado"></p>
+    </div>
+
+    <!-- Canvas para el gráfico de los últimos 10 días -->
+    <div class="chart-container">
+      <canvas id="grafico"></canvas>
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
